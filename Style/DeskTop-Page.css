@@ -73,6 +73,7 @@ body {
     font-weight: 700;
     line-height: 22px; 
     padding: 15px 260px 15px 15px;
+    margin-bottom: 21px;
 }
 .form-sigup form button{
     border-radius: 8px;
@@ -92,10 +93,11 @@ body {
 }
 .form-text{
     display: flex;
+    justify-content: center;
+    padding: 17px 0 43px 0;
 }
 .form-text .agree{
     color: #B9B6D3;
-    text-align: center;
     font-family: 'Poppins', sans-serif;
     font-size: 12px;
     font-style: normal;
@@ -104,10 +106,16 @@ body {
 }
 .form-text .term-services{
     color: #FF7A7A;
-    text-align: center;
     font-family: 'Poppins', sans-serif;
     font-size: 12px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+}
+
+.form {
+    margin-top: 32px;
+    display: flex;
+    width: 0px;
+    justify-content: center;
 }
