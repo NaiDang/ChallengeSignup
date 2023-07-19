@@ -57,13 +57,13 @@ body {
     box-shadow: 0px 6px 0px 0px rgba(0, 0, 0, 0.12);
     display: flex;
     flex-direction: column;
-    gap: 21px;
     padding: 32px 32px;
+    gap: 21px;
 }
 
 .form-group input {
     border-radius: 4px;
-    border: 1px solid #B9B6D3;
+    border: 1px solid #FF7A7A;
     background: #FFF;
     color: #777583;
     font-family: 'Poppins', sans-serif;
@@ -89,8 +89,17 @@ body {
     letter-spacing: 1px;
     text-transform: uppercase;
     padding: 18px 133px 17px 121px;
+    margin-bottom: 17px;
 }
-
+.error-text{
+    color: #FF7A7A;
+    text-align: right;
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
 .form-text {
     display: flex;
     justify-content: center;
@@ -113,8 +122,26 @@ body {
     font-weight: 700;
     line-height: normal;
 }
-
 /* Close Desk-top page */
+
+/* Script */
+.input-with-icon {
+    position: relative;
+}
+
+.input-with-icon img {
+    position: absolute;
+    top: 40%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-image: url('path/to/your/icon.png');
+    background-size: cover;
+}
+/* .error {
+    border: 2px solid #FF7A7A;
+} */
 
 
 /* Mobile page */
@@ -178,5 +205,6 @@ body {
         text-align: center;
     }
 }
-
 /* Close mobile page */
+
+/* Ipad */

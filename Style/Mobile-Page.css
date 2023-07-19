@@ -1,42 +1,31 @@
-body {
-    background: url(../Images/Back-ground.svg), #FF7A7A 50% / cover no-repeat;
-}
-
-/* Desk-top page */
-.container {
+/* body {
+    background: url(../Image/Back-ground.svg), #FF7A7A 50% / cover no-repeat;
+} */
+/* .container {
     display: flex;
     Width: 1366px;
     height: 800px;
     margin: auto auto;
-}
+    background: url(../Image/Back-ground.svg), #FF7A7A 50% / cover no-repeat;
+} */
 
+@media (max-width: 400px) {
+body {
+    background: url(../Image/Back-ground.svg), #FF7A7A 50% / cover no-repeat;
+}
 .signup-title {
     color: #FFF;
+    text-align: center;
     font-family: 'Poppins', sans-serif;
-    font-size: 39px;
+    font-size: 40px;
     font-style: normal;
     font-weight: 700;
     line-height: 40px;
-    padding: 299px 235px 41px 135px;
+    width: 340px;
+    padding: 90px 30px 15px 30px;
 }
 
 .signup-sub-title {
-    color: #FFF;
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    padding: 0px 80px 0px 135px;
-}
-
-.form-box {
-    display: flex;
-    border-radius: 8px;
-    background: #6055A5;
-    box-shadow: 0px 6px 0px 0px rgba(0, 0, 0, 0.12);
-    margin-bottom: 24px;
-    align-items: center;
     color: #FFF;
     text-align: center;
     font-family: 'Poppins', sans-serif;
@@ -44,11 +33,37 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    padding: 17px 95px 16px 95px;
+    padding: 0px 24px 44px 24px;
 }
 
+.form-box {
+    border-radius: 8px;
+    background: #6055A5;
+    box-shadow: 0px 6px 0px 0px rgba(0, 0, 0, 0.12);
+    margin-bottom: 24px;
+    align-items: center;
+    padding: 17px;
+}
+.form-box-text {
+    color: #FFF;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.form-box-sub-text{
+    color: #FFF;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
 .form-signup {
-    padding: 134px 0px;
+    padding: 0px 30px;
 }
 
 .form-group {
@@ -57,8 +72,10 @@ body {
     box-shadow: 0px 6px 0px 0px rgba(0, 0, 0, 0.12);
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     gap: 21px;
-    padding: 32px 32px;
+    padding: 32px 0px;
 }
 
 .form-group input {
@@ -71,7 +88,7 @@ body {
     font-style: normal;
     font-weight: 700;
     line-height: 22px;
-    padding: 15px 248px 15px 15px;
+    padding: 15px 32px 15px 16px;
 }
 
 .form-group button {
@@ -88,11 +105,10 @@ body {
     line-height: normal;
     letter-spacing: 1px;
     text-transform: uppercase;
-    padding: 18px 133px 17px 121px;
+    padding: 18px 26px;
 }
 
 .form-text {
-    display: flex;
     justify-content: center;
 }
 
@@ -112,71 +128,7 @@ body {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    text-align: center;
+    padding: 7px ;
+} 
 }
-
-/* Close Desk-top page */
-
-
-/* Mobile page */
-@media (max-width: 400px) {
-    .container {
-        display: block;
-        width: 400px !important;
-        height: 965px !important;
-    }
-
-    .signup-title {
-        max-width: 340px;
-        text-align: center;
-        padding: 90px 30px 15px 30px;
-    }
-
-    .signup-sub-title {
-        max-width: 352px;
-        text-align: center;
-        padding: 0px 24px 44px 24px;
-    }
-
-    .form-box {
-        padding: 17px;
-        display: block;
-    }
-
-    .form-box-sub-text {
-        color: #FFF;
-        text-align: center;
-        font-family: 'Poppins', sans-serif;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-    }
-
-    .form-signup {
-        padding: 0px 30px;
-    }
-
-    .form-group {
-        padding: 32px 30px;
-    }
-
-    .form-group input {
-        padding: 15px 58px 13px 16px;
-    }
-
-    .form-group button {
-        padding: 16px 33px;
-    }
-
-    .form-text {
-        display: block;
-        justify-content: center;
-    }
-
-    .form-text .term-services {
-        padding: 7px;
-        text-align: center;
-    }
-}
-
-/* Close mobile page */
