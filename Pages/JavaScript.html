@@ -17,8 +17,7 @@
     <div class="container">
         <div class="signup-text">
             <div class="signup-title">Learn to code by watching others</div>
-            <div class="signup-sub-title">See how experienced developers solve problems in real-time. Watching scripted
-                tutorials is great, but understanding how developers think is invaluable.</div>
+            <div class="signup-sub-title">See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.</div>
         </div>
         <div class="form-signup">
             <div class="form-box">
@@ -28,26 +27,26 @@
             <div class="form-group">
                 <div class="input-with-icon">
                     <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
-                    <img src="../Images/Icon-error.svg" alt="">
-                    <div class="error-text" id="first-name-error">First Name cannot be empty</div>
+                    <img id="first-name-icon" src="../Images/Icon-error.svg" alt="">
+                    <div class="error-text" id="first-name-error"></div>
                 </div>
 
                 <div class="input-with-icon">
                     <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
-                    <img src="../Images/Icon-error.svg" alt="">
-                    <div class="error-text" id="last-name-error">Last Name cannot be empty</div>
+                    <img id="last-name-icon" src="../Images/Icon-error.svg" alt="">
+                    <div class="error-text" id="last-name-error"></div>
                 </div>
 
                 <div class="input-with-icon">
                     <input type="email" id="email" name="email" placeholder="Email Address" required>
-                    <img src="../Images/Icon-error.svg" alt="">
-                    <div class="error-text" id="email-error">Looks like this is not an email</div>
+                    <img id="email-icon" src="../Images/Icon-error.svg" alt="">
+                    <div class="error-text" id="email-error"></div>
                 </div>
 
                 <div class="input-with-icon">
                     <input type="password" id="password" name="password" placeholder="Password" required>
-                    <img src="../Images/Icon-error.svg" alt="">
-                    <div class="error-text" id="password-error">Password cannot be empty</div>
+                    <img id="password-icon" src="../Images/Icon-error.svg" alt="">
+                    <div class="error-text" id="password-error"></div>
                 </div>
 
                 <button id="submit-btn">Claim your free trial</button>
@@ -56,7 +55,6 @@
                     <div class="term-services">Terms and Services</div>
                 </div>
             </div>
-
         </div>
     </div>
     <script>
@@ -67,53 +65,47 @@
             var lastName = document.getElementById('last-name');
             var email = document.getElementById('email');
             var password = document.getElementById('password');
-            var errorMessages = [];
+
+            document.getElementById("first-name-error").textContent = "";
+            document.getElementById("last-name-error").textContent = "";
+            document.getElementById("email-error").textContent = "";
+            document.getElementById("password-error").textContent = "";
 
             // Check and handle errors for each input field
-            if (firstName.value === '') {
-                errorMessages.push('First Name cannot be empty');
+            if (firstName.value === "") {
+                document.getElementById("first-name-error").textContent = "First Name cannot be empty";
                 firstName.style.borderColor = '#FF7A7A';
-                firstName.nextElementSibling.style.display = 'inline'; // Show error image
+                document.getElementById("first-name-icon").style.display = "inline-block";
             } else {
-                document.getElementById('first-name-error').style.display = 'none'; // Hide error message
                 firstName.style.borderColor = '#B9B6D3';
-                firstName.nextElementSibling.style.display = 'none'; // Hide error image
+                document.getElementById("first-name-icon").style.display = "none";
             }
 
-            if (lastName.value === '') {
-                errorMessages.push('Last Name cannot be empty');
+            if (lastName.value === "") {
+                document.getElementById("last-name-error").textContent = "Last Name cannot be empty";
                 lastName.style.borderColor = '#FF7A7A';
-                lastName.nextElementSibling.style.display = 'inline';
+                document.getElementById("last-name-icon").style.display = "inline-block";
             } else {
-                document.getElementById('last-name-error').style.display = 'none';
                 lastName.style.borderColor = '#B9B6D3';
-                lastName.nextElementSibling.style.display = 'none';
+                document.getElementById("last-name-icon").style.display = "none";
             }
 
-            if (email.value === '') {
-                if (errorMessages.indexOf('Looks like this is not an email') === -1) {
-                    errorMessages.push('Looks like this is not an email');
-                }
+            if (email.value === "") {
+                document.getElementById("email-error").textContent = "Email Address cannot be empty";
                 email.style.borderColor = '#FF7A7A';
-                email.nextElementSibling.style.display = 'inline';
+                document.getElementById("email-icon").style.display = "inline-block";
             } else {
-                document.getElementById('email-error').style.display = 'none';
                 email.style.borderColor = '#B9B6D3';
-                email.nextElementSibling.style.display = 'none';
+                document.getElementById("email-icon").style.display = "none";
             }
 
-            if (password.value === '') {
-                errorMessages.push('Password cannot be empty');
+            if (password.value === "") {
+                document.getElementById("password-error").textContent = "Password cannot be empty";
                 password.style.borderColor = '#FF7A7A';
-                password.nextElementSibling.style.display = 'inline';
+                document.getElementById("password-icon").style.display = "inline-block";
             } else {
-                document.getElementById('password-error').style.display = 'none';
                 password.style.borderColor = '#B9B6D3';
-                password.nextElementSibling.style.display = 'none';
-            }
-
-            if (errorMessages.length > 0) {
-                return;
+                document.getElementById("password-icon").style.display = "none";
             }
         });
     </script>
