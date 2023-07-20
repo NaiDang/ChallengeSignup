@@ -1,13 +1,16 @@
 body {
-    background: url(../Images/Back-ground.svg), #FF7A7A 50% / cover no-repeat;
+    margin: 0px;
+    background: url(../Images/Background.svg), #FF7A7A 50% / cover no-repeat;
 }
 
 /* Desk-top page */
 .container {
     display: flex;
-    Width: 1366px;
-    height: 800px;
+    height: 100vh;
+    max-width: 1096px;
     margin: auto auto;
+    align-items: center;
+    gap: 80px;
 }
 
 .signup-title {
@@ -17,7 +20,8 @@ body {
     font-style: normal;
     font-weight: 700;
     line-height: 40px;
-    padding: 299px 235px 41px 135px;
+    max-width: 333px;
+    margin-bottom: 41px;
 }
 
 .signup-sub-title {
@@ -27,7 +31,7 @@ body {
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    padding: 0px 80px 0px 135px;
+    max-width: 488px;
 }
 
 .form-box {
@@ -36,19 +40,15 @@ body {
     background: #6055A5;
     box-shadow: 0px 6px 0px 0px rgba(0, 0, 0, 0.12);
     margin-bottom: 24px;
-    align-items: center;
     color: #FFF;
-    text-align: center;
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    padding: 17px 95px 16px 95px;
-}
-
-.form-signup {
-    padding: 134px 0px;
+    padding: 17px;
+    text-align: center;
+    justify-content: center;
 }
 
 .form-group {
@@ -57,8 +57,8 @@ body {
     box-shadow: 0px 6px 0px 0px rgba(0, 0, 0, 0.12);
     display: flex;
     flex-direction: column;
-    gap: 21px;
     padding: 32px 32px;
+    gap: 21px;
 }
 
 .form-group input {
@@ -71,7 +71,12 @@ body {
     font-style: normal;
     font-weight: 700;
     line-height: 22px;
-    padding: 15px 248px 15px 15px;
+    width: 100%;
+    padding: 15px;
+}
+
+.input-with-icon {
+    padding: 0px 32px 0px 0px;
 }
 
 .form-group button {
@@ -88,7 +93,20 @@ body {
     line-height: normal;
     letter-spacing: 1px;
     text-transform: uppercase;
-    padding: 18px 133px 17px 121px;
+    padding: 18px;
+}
+
+.error-text {
+    color: #FF7A7A;
+    text-align: right;
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: absolute;
+    right: 0px;
+    /* bottom: -15px; */
 }
 
 .form-text {
@@ -116,6 +134,27 @@ body {
 
 /* Close Desk-top page */
 
+/* Script */
+.input-with-icon {
+    position: relative;
+}
+
+.input-with-icon img {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+}
+
+.input-with-icon img {
+    display: none;
+}
+
+/* Close Script */
+
 
 /* Mobile page */
 @media (max-width: 400px) {
@@ -128,7 +167,8 @@ body {
     .signup-title {
         max-width: 340px;
         text-align: center;
-        padding: 90px 30px 15px 30px;
+        padding: 90px 30px 0px 30px;
+        margin-bottom: 15px;
     }
 
     .signup-sub-title {
@@ -158,10 +198,6 @@ body {
 
     .form-group {
         padding: 32px 30px;
-    }
-
-    .form-group input {
-        padding: 15px 58px 13px 16px;
     }
 
     .form-group button {
