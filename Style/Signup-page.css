@@ -10,9 +10,10 @@ body {
     max-width: 1096px;
     margin: auto auto;
     align-items: center;
-    gap: 80px;
 }
-
+.signup-text{
+    max-width: 488px;
+}
 .signup-title {
     color: #FFF;
     font-family: 'Poppins', sans-serif;
@@ -20,7 +21,6 @@ body {
     font-style: normal;
     font-weight: 700;
     line-height: 40px;
-    max-width: 333px;
     margin-bottom: 41px;
 }
 
@@ -31,9 +31,12 @@ body {
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    max-width: 488px;
+    min-width: 488px;
 }
-
+.form-signup{
+    width: 100%;
+    margin-left: 80px;
+}
 .form-box {
     display: flex;
     border-radius: 8px;
@@ -59,6 +62,7 @@ body {
     flex-direction: column;
     padding: 32px 32px;
     gap: 21px;
+    /* margin-left: 80px; */
 }
 
 .form-group input {
@@ -157,29 +161,36 @@ body {
 
 
 /* Mobile page */
-@media (max-width: 400px) {
+@media (max-width: 768px) {
     .container {
         display: block;
-        width: 400px !important;
-        height: 965px !important;
+        max-width: 100%;
+        padding: 90px 30px 49px 30px;
+        height: auto;
     }
 
     .signup-title {
-        max-width: 340px;
+        max-width: 100%;
         text-align: center;
-        padding: 90px 30px 0px 30px;
         margin-bottom: 15px;
     }
 
     .signup-sub-title {
-        max-width: 352px;
+        max-width: 100%;
         text-align: center;
-        padding: 0px 24px 44px 24px;
+        min-width: 100%;
+        margin-bottom: 44px;
+    }
+    .signup-text{
+        max-width: 100%;
+        text-align: center;
+        margin-right: 0;
     }
 
     .form-box {
         padding: 17px;
         display: block;
+        width: auto;
     }
 
     .form-box-sub-text {
@@ -193,26 +204,27 @@ body {
     }
 
     .form-signup {
-        padding: 0px 30px;
+        width: auto;
     }
 
     .form-group {
+        width: auto;
         padding: 32px 30px;
     }
-
-    .form-group button {
-        padding: 16px 33px;
-    }
-
     .form-text {
         display: block;
         justify-content: center;
-    }
-
-    .form-text .term-services {
-        padding: 7px;
         text-align: center;
     }
+
+  
 }
 
 /* Close mobile page */
+
+/* @media (max-width: 800px) {
+    .container {
+        display: block;
+    }
+
+} */

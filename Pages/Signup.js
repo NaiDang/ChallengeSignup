@@ -31,23 +31,18 @@ document.getElementById('submit-btn').addEventListener('click', function (event)
         lastName.style.borderColor = '#B9B6D3';
         document.getElementById("last-name-icon").style.display = "none";
     }
-
     if (email.value === "" || !emailPattern.test(email.value)) {
         email.style.borderColor = '#FF7A7A';
         document.getElementById("email-icon").style.display = "inline-block";
-
-    }
-    if (!emailPattern.test(email.value)) {
-        document.getElementById("email-error").textContent = "Please enter a valid email address";
-    }
-    if (email.value === "") {
-        document.getElementById("email-error").textContent = "Email cannot be empty";
-    }
-    else {
+        if (email.value === "") {
+            document.getElementById("email-error").textContent = "Email cannot be empty";
+        } else {
+            document.getElementById("email-error").textContent = "Looks like this is not an email";
+        }
+    } else {
         email.style.borderColor = '#B9B6D3';
         document.getElementById("email-icon").style.display = "none";
     }
-
     if (password.value === "") {
         document.getElementById("password-error").textContent = "Password cannot be empty";
         password.style.borderColor = '#FF7A7A';
