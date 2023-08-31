@@ -62,7 +62,6 @@ body {
     flex-direction: column;
     padding: 32px 32px;
     gap: 21px;
-    /* margin-left: 80px; */
 }
 
 .form-group input {
@@ -110,7 +109,6 @@ body {
     line-height: normal;
     position: absolute;
     right: 0px;
-    /* bottom: -15px; */
 }
 
 .form-text {
@@ -219,12 +217,3 @@ body {
 
   
 }
-
-/* Close mobile page */
-
-/* @media (max-width: 800px) {
-    .container {
-        display: block;
-    }
-
-} */
